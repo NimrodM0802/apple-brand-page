@@ -1,0 +1,14 @@
+$primary-color: #000;
+$seconday-color: #2e2e2e;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }    
+}

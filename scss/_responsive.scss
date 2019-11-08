@@ -1,0 +1,54 @@
+@include media-md {
+    .menu-btn {
+        visibility: visible;
+        justify-content: flex-start;
+    }
+    .nav {
+        visibility: hidden;
+        .fab {
+            visibility: visible;
+            position: absolute;
+            left: 50%;
+        }
+        .fa-shopping-bag {
+            visibility: visible;
+            position: absolute;
+            right: 1rem;
+        }
+    }
+
+    .upper-section {
+        h1 {
+            font-size: 40px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        
+        h4 {
+            margin: 20px auto;
+        }
+    }
+    .lower-section {
+        margin: 0;
+        padding: 30px 0 0 0;
+        h1 {
+            font-size: 40px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        
+        h4 {
+            margin: 20px auto;
+        }
+        .center-image {
+            margin: 0;
+            padding: 20px 0 0 0;
+        }
+    }
+}
