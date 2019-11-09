@@ -1,7 +1,14 @@
-@import 'config';
-@import 'menu';
-@import 'responsive';
 @import 'animate';
+
+$primary-color: #000;
+$seconday-color: #2e2e2e;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 
 body {
     background: $primary-color;
@@ -24,6 +31,40 @@ header {
     background-color: #2c2c2c;
 
 }
+.menu-btn {
+    position: absolute;
+    z-index: 1;
+    left: 1rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    visibility: hidden;
+    // @include transition-ease;
+
+    &_burger {
+        position: absolute;
+        left: 0;
+        top: 0.8rem;
+        width: 20px;
+        height: 1px;
+        background: #fff;
+        // @include transition-ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            width: 20px;
+            height: 1px;
+            background: #fff;
+            // @include transition-ease;
+        }
+
+       
+    }
+}
+
 
 .nav {
     width: 70%;
@@ -123,6 +164,61 @@ ul {
 .lower-section_name {
     margin-top: 20px;
     padding: 30px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        visibility: visible;
+        justify-content: flex-start;
+    }
+    .nav {
+        visibility: hidden;
+        .fab {
+            visibility: visible;
+            position: absolute;
+            left: 50%;
+        }
+        .fa-shopping-bag {
+            visibility: visible;
+            position: absolute;
+            right: 1rem;
+        }
+    }
+
+    .upper-section {
+        h1 {
+            font-size: 40px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        
+        h4 {
+            margin: 20px auto;
+        }
+    }
+    .lower-section {
+        margin: 0;
+        padding: 30px 0 0 0;
+        h1 {
+            font-size: 40px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        
+        h4 {
+            margin: 20px auto;
+        }
+        .center-image {
+            margin: 0;
+            padding: 20px 0 0 0;
+        }
+    }
 }
 
 
